@@ -1,0 +1,25 @@
+*.class
+
+# Ignore IDE files
+.vscode/
+
+# We will include mysql-connector-j-9.6.0.jar and flatlaf since they are needed to run your app easily from github.
+
+# Ignore weird accidentally created files if they exist
+CREATE
+INSERT
+SHOW
+USE
+VALUES
+cd
+java
+javac
+department
+name
+password
+role
+username
+id
+select
+C
+)

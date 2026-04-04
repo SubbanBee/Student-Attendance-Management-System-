@@ -1,0 +1,58 @@
+========================================
+ATTENDANCE MANAGEMENT SYSTEM - RUN STEPS
+========================================
+
+Database user: ams_user
+Database password: password123
+MySQL Connector: 9.6.0 (mysql-connector-j-9.6.0.jar)
+
+----------------------------------------
+1. DATABASE SETUP (one-time)
+----------------------------------------
+  - Ensure MySQL Server is running.
+  - Create database "college_erp" and grant ams_user all privileges.
+  - Run the SQL script: create_fresh_database.sql (as root)
+    OR create tables manually (users, students, subjects, faculty, attendance).
+
+  Default logins after setup:
+    admin   / admin123   (Admin)
+    faculty1 / faculty123 (Faculty)
+    student1 / student123 (Student)
+
+----------------------------------------
+2. MYSQL CONNECTOR JAR
+----------------------------------------
+  Place mysql-connector-j-9.6.0.jar in a folder (e.g. C:\Users\subba\Downloads\).
+  Edit run_attendance.bat and set:
+    set MYSQL_CONNECTOR=C:\Users\subba\Downloads\mysql-connector-j-9.6.0.jar
+  (Change path if your JAR is elsewhere.)
+
+----------------------------------------
+3. RUN THE APPLICATION
+----------------------------------------
+  Option A: Double-click run_attendance.bat
+
+  Option B: Command Prompt
+    cd "c:\Users\subba\OneDrive\Desktop\AttendanceProject"
+    javac *.java
+    java -cp ".;C:\Users\subba\Downloads\mysql-connector-j-9.6.0.jar" AcademicSystem
+
+----------------------------------------
+4. ROLE-BASED MODULES
+----------------------------------------
+  ADMIN:
+    - Add / View / Delete Student
+    - Add / View Faculty
+    - Add Subject, Register User
+    - View Attendance, Attendance Chart, Export PDF
+    - Logout
+
+  FACULTY:
+    - Mark Attendance, View Attendance, Attendance Chart
+    - Logout
+
+  STUDENT:
+    - View My Attendance
+    - Logout
+
+========================================
